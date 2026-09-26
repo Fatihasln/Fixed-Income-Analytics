@@ -1,3 +1,5 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Fatihasln/Fixed-Income-Analytics/blob/main/notebooks/credit_engine_FULL.ipynb)
+
 # credit-analytics-engine
 
 Corporate bond pricing, interest-rate risk (Macaulay / Modified duration, convexity, DV01),
@@ -60,6 +62,17 @@ additively, so **CS01 equals curve DV01 exactly** (tested). The two risks differ
 moves and by how much*: spread volatility is much larger than rate volatility for high yield and in
 stress. The meaningful comparison is therefore `sensitivity x typical factor move`
 (risk contribution), which is what the Day-2 analysis builds on real FRED data.
+
+
+## Why the dashboard/charts don't show up on GitHub
+GitHub's notebook viewer only displays outputs that were saved inside the `.ipynb` file, and it never executes
+code. This notebook is a template meant to be run fresh each time (it writes and imports the actual library
+source at runtime -- see `scripts/make_colab_notebook.py`), so it is committed with no saved outputs: no
+charts, no tables, no dashboard. On top of that, the interactive dashboard (Section I) uses `ipywidgets`, which
+needs a live Python kernel and cannot render in any static viewer, GitHub included.
+
+Click the "Open In Colab" badge at the top of this README to run the notebook and see everything (charts,
+tables, the three-tab dashboard) live.
 
 ## Quick start
 ```bash
